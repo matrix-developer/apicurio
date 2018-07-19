@@ -1,0 +1,42 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "jenkins-api",
+    "description" : "jenkins",
+    "version" : "1.0.0"
+  },
+  "paths" : {
+    "/JENKINS_URL/job/JOB_NAME/build" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body"
+        } ]
+      },
+      "post" : {
+        "parameters" : [ {
+          "name" : "name",
+          "in" : "formData",
+          "required" : true,
+          "type" : "string",
+          "format" : "binary"
+        }, {
+          "name" : "testquery",
+          "in" : "query"
+        } ],
+        "responses" : {
+          "200" : { }
+        }
+      },
+      "options" : {
+        "parameters" : [ {
+          "name" : "formex",
+          "in" : "formData"
+        } ]
+      }
+    }
+  },
+  "definitions" : {
+    "jsonex" : { }
+  }
+}
